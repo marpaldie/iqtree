@@ -5,7 +5,7 @@ import subprocess
 def ejecutar_iqtree(directorio_bin, fichero1, fichero2,numero_replicas,modo = "TESTMERGE"):
     result = []
 
-    # C:/Users/maria/Downloads/iqtree-1.6.12-Windows/bin/iqtree -s Lithobates_concat.txt - q Lithobates_part.txt -m MF+MERGE -alrt 1000
+    # C:/Users/maria/Downloads/iqtree-1.6.12-Windows/bin/iqtree -s Lithobates_concat.txt - q Lithobates_part.txt -m TESTMERGE -alrt 1000
     comando = [directorio_bin,
                '-s',
                fichero1,
@@ -16,7 +16,7 @@ def ejecutar_iqtree(directorio_bin, fichero1, fichero2,numero_replicas,modo = "T
                '-alrt',
                str(numero_replicas)
                ]
-    print("Esto debe de coincidir con lo que metias tu a mano",' '.join(comando))
+    print("Esto debe de coincidir con el codigo puesto en cmb",' '.join(comando))
     process = subprocess.Popen(comando,
                                shell=True,
                                stdout=subprocess.PIPE,
@@ -30,18 +30,13 @@ def ejecutar_iqtree(directorio_bin, fichero1, fichero2,numero_replicas,modo = "T
         raise Exception('cmd %s failed, see above for details', errcode)
 
 
-if __name__ == '__main__': #Esto se utiliza formalmente para la parte de ejecución, para que este código no se ejecute si se importa este fichero
+if __name__ == '__main__':
 
-    ruta_comando = "C:/Users/maria/Downloads/iqtree-1.6.12-Windows/bin/iqtree" #mete aqui la ruta entera, así no tienes que hacer el cd.
-    # directorio_ficheros= 'C:/blabla' #donde tienes los datos
+    ruta_comando = "C:/Users/maria/Downloads/iqtree-1.6.12-Windows/bin/iqtree"
 
-    #mejora los nombres
     fichero1 = "Lithobates_concat.txt"
     fichero2 = "Lithobates_part.txt"
 
-    #alomejor tienes que meter la ruta entera. Utiliza os.path.join para formar las rutas.
-    # path_fichero_1 = os.path.join(directorio_ficheros, fichero1)
-    # path_fichero_2 = os.path.join(directorio_ficheros, fichero2)
 
     numero_replicas = 1000
 

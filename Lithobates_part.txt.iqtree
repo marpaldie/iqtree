@@ -1,0 +1,231 @@
+IQ-TREE 1.6.12 built Aug 15 2019
+
+Partition file name: Lithobates_part.txt
+Input file name: Lithobates_concat.txt
+Type of analysis: ModelFinder + tree reconstruction
+Random seed number: 913092
+
+REFERENCES
+----------
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh
+(2015) IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol Biol Evol, 32:268-274.
+https://doi.org/10.1093/molbev/msu300
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst Biol, 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 83 taxa with 4 partitions and 1235 total sites (15.7204% missing data)
+
+  ID  Name   Type	Seq	Site	Unique	Infor	Invar	Const
+   1  16S    DNA	60	572	179	69	406	406
+   2  COI_1  DNA	44	221	51	19	187	187
+   3  COI_2  DNA	44	221	29	0	219	219
+   4  COI_3  DNA	44	221	106	67	44	44
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TIM2+F+G4:16S,TNe+G4:COI_1,F81+F+I+G4:COI_2,TPM3u+F:COI_3
+
+List of best-fit models per partition:
+
+  ID  Model             LogL          AIC      w-AIC      AICc     w-AICc       BIC      w-BIC
+   1  TIM2+F+G4        -1837.2523   3688.5045 - 0.0000   3688.7031 - 0.0000   3718.9485 - 0.0000
+   2  TNe+G4            -503.7072   1013.4144 - 0.0000   1013.5250 - 0.0000   1023.6089 - 0.0000
+   3  F81+F+I+G4        -303.7536    617.5071 - 0.0000    617.7862 - 0.0000    634.4979 - 0.0000
+   4  TPM3u+F          -1098.3969   2206.7937 - 0.0000   2207.0728 - 0.0000   2223.7845 - 0.0000
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-equal partition model but separate models between partitions
+
+  ID  Model           Speed  Parameters
+   1  TIM2+F+G4      1.0000  TIM2{13.1815,23.4238,100}+F{0.307524,0.22288,0.190108,0.279488}+G4{0.181435}
+   2  TNe+G4         1.0000  TNe{1.52432,100}+FQ+G4{0.110056}
+   3  F81+F+I+G4     1.0000  F81+I{0.978533}+G4{0.0621634}
+   4  TPM3u+F        1.0000  TPM3u{2.24475,9.29739}+F{0.339818,0.198218,0.0695303,0.392434}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -3692.9252 (s.e. 90.6068)
+Unconstrained log-likelihood (without tree): -4516.7987
+Number of free parameters (#branches + #model parameters): 139
+Akaike information criterion (AIC) score: 7663.8504
+Corrected Akaike information criterion (AICc) score: 7699.3938
+Bayesian information criterion (BIC) score: 8375.3672
+
+Total tree length (sum of branch lengths): 2.0272
+Sum of internal branch lengths: 0.6353 (31.3376% of tree length)
+
+WARNING: 34 near-zero internal branches (<0.0008) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Hyalinobatrachium_esmeralda_KP149361_LSB384' is drawn at root
+Numbers in parentheses are SH-aLRT support (%)
+
++-----------------------------------------------------------Hyalinobatrachium_esmeralda_KP149361_LSB384
+|
++------------------------------------------------Chiasmocleis_cf_jimi_MH919946_MPEG24527
+|
+|                                                                                 +**Lithobates_palmipes_976956
+|                                                                              +**| (0)
+|                                                                              |  +**Lithobates_palmipes_MAPT1437
+|                                                                           +**| (0)
+|                                                                           |  +--Lithobates_palmipes_TG204
+|                                                                        +--| (75.8)
+|                                                                        |  |  +**Lithobates_palmipes_MNCN-ADN_50843_Juruena_MatoGrosso_BR
+|                                                                        |  +**| (0)
+|                                                                        |     +**Lithobates_palmipes_MNCN-ADN_50844_Juruena_MatoGrosso_BR
+|                                                                     +--| (77.9)
+|                                                                     |  |                 +**Lithobates_palmipes_AAGARDA1855
+|                                                                     |  |              +**| (0)
+|                                                                     |  |              |  |  +**Lithobates_palmipes_AAGARDA1861
+|                                                                     |  |              |  +--| (92.5)
+|                                                                     |  |              |     +**Lithobates_palmipes_AAGARDA2846
+|                                                                     |  |           +**| (0)
+|                                                                     |  |           |  +**Lithobates_palmipes_CFBH_23401
+|                                                                     |  |        +--| (86.5)
+|                                                                     |  |        |  |  +**Lithobates_palmipes_AAGARDA1858
+|                                                                     |  |        |  +--| (90.2)
+|                                                                     |  |        |     +**Lithobates_palmipes_CFBH_26581
+|                                                                     |  |     +--| (87.1)
+|                                                                     |  |     |  |        +**Lithobates_palmipes_AF3111
+|                                                                     |  |     |  |     +**| (0)
+|                                                                     |  |     |  |     |  |  +**Lithobates_palmipes_CM010
+|                                                                     |  |     |  |     |  +**| (0)
+|                                                                     |  |     |  |     |     +--Lithobates_palmipes_URCA5078
+|                                                                     |  |     |  |  +**| (0)
+|                                                                     |  |     |  |  |  +**Lithobates_palmipes_CAAM27
+|                                                                     |  |     |  +**| (0)
+|                                                                     |  |     |     |     +**Lithobates_palmipes_FRD1336
+|                                                                     |  |     |     |  +**| (0)
+|                                                                     |  |     |     |  |  +--Lithobates_palmipes_MUFAL12570
+|                                                                     |  |     |     +**| (0)
+|                                                                     |  |     |        |  +**Lithobates_palmipes_FSCHUFPB10009
+|                                                                     |  |     |        +**| (0)
+|                                                                     |  |     |           +**Lithobates_palmipes_FSCHUFPB10010
+|                                                                     |  |  +--| (75.7)
+|                                                                     |  |  |  |           +**Lithobates_palmipes_AF1229
+|                                                                     |  |  |  |        +--| (0)
+|                                                                     |  |  |  |        |  |     +**Lithobates_palmipes_AG080
+|                                                                     |  |  |  |        |  |  +**| (0)
+|                                                                     |  |  |  |        |  |  |  |  +**Lithobates_palmipes_CFBH_18548
+|                                                                     |  |  |  |        |  |  |  +--| (82.4)
+|                                                                     |  |  |  |        |  |  |     |  +**Lithobates_palmipes_MUFAL10786
+|                                                                     |  |  |  |        |  |  |     +**| (0)
+|                                                                     |  |  |  |        |  |  |        +**Lithobates_palmipes_MUFAL6742
+|                                                                     |  |  |  |        |  +**| (0)
+|                                                                     |  |  |  |        |     +**Lithobates_palmipes_MAPT2415
+|                                                                     |  |  |  |     +--| (0)
+|                                                                     |  |  |  |     |  +--Lithobates_palmipes_AF3303
+|                                                                     |  |  |  |  +**| (0)
+|                                                                     |  |  |  |  |  +**Lithobates_palmipes_AF2339
+|                                                                     |  |  |  +**| (0)
+|                                                                     |  |  |     |  +**Lithobates_palmipes_GFH100
+|                                                                     |  |  |     +--| (80.7)
+|                                                                     |  |  |        +**Lithobates_palmipes_GFH101
+|                                                                     |  +--| (96.1)
+|                                                                     |     +--Lithobates_palmipes_GRColli14822
+|                                                                  +--| (86)
+|                                                                  |  +**Lithobates_palmipes_CFBH_21865
+|                                                               +--| (68.2)
+|                                                               |  +--Lithobates_palmipes_MHNLS_17185_ElTocuco_Zulia_VE
+|                                                            +**| (0)
+|                                                            |  |        +**Lithobates_palmipes_AMNHA166454
+|                                                            |  |     +**| (0)
+|                                                            |  |     |  |  +**Lithobates_palmipes_AJC_3266_SierraImataca_DeltaAmacuro_VE
+|                                                            |  |     |  +**| (0)
+|                                                            |  |     |     +**Lithobates_palmipes_AJC_3267_SierraImataca_DeltaAmacuro_VE
+|                                                            |  |  +**| (0)
+|                                                            |  |  |  +**Lithobates_palmipes_TJC1174
+|                                                            |  +--| (97.1)
+|                                                            |     +**Lithobates_palmipes_TJC1289
+|                                                         +--| (89)
+|                                                         |  |        +**Lithobates_palmipes_CFBH_18987
+|                                                         |  |     +**| (0)
+|                                                         |  |     |  |        +--Lithobates_palmipes_GRColli4232
+|                                                         |  |     |  |     +--| (80.1)
+|                                                         |  |     |  |     |  +--Lithobates_palmipes_H1492
+|                                                         |  |     |  |  +**| (0)
+|                                                         |  |     |  |  |  +**Lithobates_palmipes_H1125
+|                                                         |  |     |  +**| (0)
+|                                                         |  |     |     +**Lithobates_palmipes_GRColli4233
+|                                                         |  |  +**| (0)
+|                                                         |  |  |  |  +**Lithobates_palmipes_MTR_ALCX215P55
+|                                                         |  |  |  +**| (0)
+|                                                         |  |  |     +**Lithobates_palmipes_CFBHT07602
+|                                                         |  +--| (81.3)
+|                                                         |     |                 +**Lithobates_palmipes_INPAHT3220
+|                                                         |     |              +**| (0)
+|                                                         |     |              |  +**Lithobates_palmipes_APL_15305_RioMadeira_Rondonia_BR
+|                                                         |     |           +--| (0)
+|                                                         |     |           |  +--Lithobates_aff_palmipes_IDLAR_4198_Chalalan_LaPaz_BO
+|                                                         |     |        +**| (0)
+|                                                         |     |        |  +**Lithobates_palmipes_NMP6V_71187-1_PuertoAlmendras_Loreto_PE
+|                                                         |     |     +**| (0)
+|                                                         |     |     |  +**Lithobates_palmipes_TNHCWED54116
+|                                                         |     |  +**| (0)
+|                                                         |     |  |  |  +**Lithobates_palmipes_JMP_1615_Pucaurquillo_Loreto_PE
+|                                                         |     |  |  +**| (0)
+|                                                         |     |  |     +**Lithobates_palmipes_JMP_1616_Pucaurquillo_Loreto_PE
+|                                                         |     +--| (91.7)
+|                                                         |        |  +**Lithobates_palmipes_INPAHT8185
+|                                                         |        +--| (76.3)
+|                                                         |           +**Lithobates_palmipes_KU202896
+|                                                      +--| (58.4)
+|                                                      |  |        +**Lithobates_palmipes_INPAHT7544
+|                                                      |  |     +**| (0)
+|                                                      |  |     |  +**Lithobates_palmipes_INPAHT7545
+|                                                      |  |  +**| (0)
+|                                                      |  |  |  +**Lithobates_palmipes_MTR20842
+|                                                      |  +**| (0)
+|                                                      |     +**Lithobates_palmipes_MTR20704
+|                                       +--------------| (91.4)
+|                                       |              +**Lithobates_palmipes_BPN3652
++---------------------------------------| (98.5)
+                                        +---------Lithobates_palmipes_AMNHA118801
+
+Tree in newick format:
+
+(Hyalinobatrachium_esmeralda_KP149361_LSB384:0.6465272124,Chiasmocleis_cf_jimi_MH919946_MPEG24527:0.5365414231,(((((((((((Lithobates_palmipes_976956:0.0000025850,Lithobates_palmipes_MAPT1437:0.0000025850)0:0.0000025850,Lithobates_palmipes_TG204:0.0012490803)0:0.0000021920,(Lithobates_palmipes_MNCN-ADN_50843_Juruena_MatoGrosso_BR:0.0000025850,Lithobates_palmipes_MNCN-ADN_50844_Juruena_MatoGrosso_BR:0.0000025850)0:0.0000021516)75.8:0.0012022637,((((((Lithobates_palmipes_AAGARDA1855:0.0000023184,(Lithobates_palmipes_AAGARDA1861:0.0000023303,Lithobates_palmipes_AAGARDA2846:0.0000023311)92.5:0.0013565402)0:0.0000020702,Lithobates_palmipes_CFBH_23401:0.0000025850)0:0.0000021440,(Lithobates_palmipes_AAGARDA1858:0.0000023315,Lithobates_palmipes_CFBH_26581:0.0000022336)90.2:0.0024890693)86.5:0.0012401858,(((Lithobates_palmipes_AF3111:0.0000027083,(Lithobates_palmipes_CM010:0.0000027083,Lithobates_palmipes_URCA5078:0.0013515985)0:0.0000027285)0:0.0000025850,Lithobates_palmipes_CAAM27:0.0000027083)0:0.0000021570,((Lithobates_palmipes_FRD1336:0.0000029804,Lithobates_palmipes_MUFAL12570:0.0013592951)0:0.0000025850,(Lithobates_palmipes_FSCHUFPB10009:0.0000025850,Lithobates_palmipes_FSCHUFPB10010:0.0000025850)0:0.0000024375)0:0.0000020035)0:0.0000011483)87.1:0.0012094297,((((Lithobates_palmipes_AF1229:0.0000028371,((Lithobates_palmipes_AG080:0.0000028733,(Lithobates_palmipes_CFBH_18548:0.0000025850,(Lithobates_palmipes_MUFAL10786:0.0000023419,Lithobates_palmipes_MUFAL6742:0.0000025850)0:0.0000022460)82.4:0.0025483045)0:0.0000029896,Lithobates_palmipes_MAPT2415:0.0000026026)0:0.0000023105)0:0.0018901662,Lithobates_palmipes_AF3303:0.0025148760)0:0.0016710150,Lithobates_palmipes_AF2339:0.0000027083)0:0.0000024665,(Lithobates_palmipes_GFH100:0.0000025850,Lithobates_palmipes_GFH101:0.0000025850)80.7:0.0013564151)0:0.0000021927)75.7:0.0012228889,Lithobates_palmipes_GRColli14822:0.0027265598)96.1:0.0049549452)77.9:0.0012020907,Lithobates_palmipes_CFBH_21865:0.0000010181)86:0.0030704763,Lithobates_palmipes_MHNLS_17185_ElTocuco_Zulia_VE:0.0323823610)68.2:0.0042326123,(((Lithobates_palmipes_AMNHA166454:0.0000027083,(Lithobates_palmipes_AJC_3266_SierraImataca_DeltaAmacuro_VE:0.0000025838,Lithobates_palmipes_AJC_3267_SierraImataca_DeltaAmacuro_VE:0.0000025850)0:0.0000020097)0:0.0000021950,Lithobates_palmipes_TJC1174:0.0000022443)0:0.0000027903,Lithobates_palmipes_TJC1289:0.0000027083)97.1:0.0123847671)0:0.0000023001,(((Lithobates_palmipes_CFBH_18987:0.0000025850,(((Lithobates_palmipes_GRColli4232:0.0013598351,Lithobates_palmipes_H1492:0.0013659281)80.1:0.0013598253,Lithobates_palmipes_H1125:0.0000025850)0:0.0000023270,Lithobates_palmipes_GRColli4233:0.0000025850)0:0.0000023263)0:0.0000021939,(Lithobates_palmipes_MTR_ALCX215P55:0.0000025850,Lithobates_palmipes_CFBHT07602:0.0000025850)0:0.0000025850)0:0.0000021233,((((((Lithobates_palmipes_INPAHT3220:0.0000023871,Lithobates_palmipes_APL_15305_RioMadeira_Rondonia_BR:0.0000021078)0:0.0000022098,Lithobates_aff_palmipes_IDLAR_4198_Chalalan_LaPaz_BO:0.0267209995)0:0.0013155547,Lithobates_palmipes_NMP6V_71187-1_PuertoAlmendras_Loreto_PE:0.0000027083)0:0.0000025212,Lithobates_palmipes_TNHCWED54116:0.0000027083)0:0.0000026030,(Lithobates_palmipes_JMP_1615_Pucaurquillo_Loreto_PE:0.0000025850,Lithobates_palmipes_JMP_1616_Pucaurquillo_Loreto_PE:0.0000029804)0:0.0000021388)0:0.0000026837,(Lithobates_palmipes_INPAHT8185:0.0000023779,Lithobates_palmipes_KU202896:0.0000024404)76.3:0.0025024142)91.7:0.0011999270)81.3:0.0012034116)89:0.0050295661,(((Lithobates_palmipes_INPAHT7544:0.0000025850,Lithobates_palmipes_INPAHT7545:0.0000025850)0:0.0000020595,Lithobates_palmipes_MTR20842:0.0000029804)0:0.0000023933,Lithobates_palmipes_MTR20704:0.0000027083)0:0.0000024904)58.4:0.0025162570,Lithobates_palmipes_BPN3652:0.0000028304)91.4:0.1648527012,Lithobates_palmipes_AMNHA118801:0.1150566932)98.5:0.4358637228);
+
+TIME STAMP
+----------
+
+Date and time: Wed Oct 19 14:10:02 2022
+Total CPU time used: 179.891 seconds (0h:2m:59s)
+Total wall-clock time used: 185.26 seconds (0h:3m:5s)
+

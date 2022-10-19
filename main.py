@@ -2,10 +2,10 @@ import os
 import subprocess
 
 
-def ejecutar_iqtree(directorio_bin, fichero1, fichero2,numerito_nose_que_es,modo = MF+MERGE):
+def ejecutar_iqtree(directorio_bin, fichero1, fichero2,numero_replicas,modo = "TESTMERGE"):
     result = []
 
-    # Bin\iqtree -s Lithobates_concat.txt - q Lithobates_part.txt -m MF+MERGE -alrt 1000
+    # C:/Users/maria/Downloads/iqtree-1.6.12-Windows/bin/iqtree -s Lithobates_concat.txt - q Lithobates_part.txt -m MF+MERGE -alrt 1000
     comando = [directorio_bin,
                '-s',
                fichero1,
@@ -14,7 +14,7 @@ def ejecutar_iqtree(directorio_bin, fichero1, fichero2,numerito_nose_que_es,modo
                '-m',
                modo,
                '-alrt',
-               str(numerito_nose_que_es)
+               str(numero_replicas)
                ]
     print("Esto debe de coincidir con lo que metias tu a mano",' '.join(comando))
     process = subprocess.Popen(comando,
@@ -29,9 +29,10 @@ def ejecutar_iqtree(directorio_bin, fichero1, fichero2,numerito_nose_que_es,modo
     if errcode is not None:
         raise Exception('cmd %s failed, see above for details', errcode)
 
+
 if __name__ == '__main__': #Esto se utiliza formalmente para la parte de ejecución, para que este código no se ejecute si se importa este fichero
 
-    ruta_comando = ".Bin/iqtree" #mete aqui la ruta entera, así no tienes que hacer el cd.
+    ruta_comando = "C:/Users/maria/Downloads/iqtree-1.6.12-Windows/bin/iqtree" #mete aqui la ruta entera, así no tienes que hacer el cd.
     # directorio_ficheros= 'C:/blabla' #donde tienes los datos
 
     #mejora los nombres
@@ -42,7 +43,8 @@ if __name__ == '__main__': #Esto se utiliza formalmente para la parte de ejecuci
     # path_fichero_1 = os.path.join(directorio_ficheros, fichero1)
     # path_fichero_2 = os.path.join(directorio_ficheros, fichero2)
 
-    numerito_nose_que_es = 1000
+    numero_replicas = 1000
 
-    ejecutar_iqtree(ruta_comando, fichero1,fichero2,numerito_nose_que_es)
+    ejecutar_iqtree(ruta_comando, fichero1,fichero2,numero_replicas)
+
 
